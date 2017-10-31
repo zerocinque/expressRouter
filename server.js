@@ -20,7 +20,7 @@ router.get('/', function(req, res){
     res.sendFile(__dirname + '/public/index.html');
 });
 
-router.get('/', function (req, res) {
+router.get('/about', function (req, res) {
     res.sendFile(__dirname + '/public/about.html');
 });
 
@@ -31,7 +31,7 @@ router.get('/user/:id', function (req, res) {
 app.use('/', router);
 
 app.use('*', function (req, res) {
-    res.senFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/404.html');
 });
 
 app.listen(3000, function () {
